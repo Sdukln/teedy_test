@@ -5,7 +5,7 @@
     "validation_code_required": "Kod weryfikacyjny jest wymagany",
     "validation_code_title": "Masz aktywowane uwierzytelnienie dwuskładnikowe swojego konta. Podaj kod weryfikacyjny wygenerowany w aplikacji autoryzującej.",
     "validation_code": "Kod weryfikacyjny",
-    "remember_me": "Zapamiętaj mnie",
+
     "submit": "Zarejestruj się",
     "login_as_guest": "Zaloguj jako gość",
     "login_failed_title": "Logowanie nieudane",

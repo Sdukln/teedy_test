@@ -84,6 +84,31 @@
 
   <build>
     <plugins>
+
+      <!-- PMD plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>3.16.0</version> <!-- Use the latest version available -->
+        <configuration>
+          <!-- Configuration options -->
+          <rulesets>
+            <!-- Specify rulesets -->
+            <ruleset>/rulesets/java/basic.xml</ruleset>
+            <ruleset>/rulesets/java/design.xml</ruleset>
+          </rulesets>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>verify</phase>
+            <goals>
+              <goal>check</goal> <!-- runs PMD and fails the build if serious issues are found -->
+              <goal>pmd</goal> <!-- generates a PMD report -->
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-antrun-plugin</artifactId>

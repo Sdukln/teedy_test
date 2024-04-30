@@ -85,6 +85,32 @@
   <build>
     <plugins>
 
+      <!-- Surefire plugin for running tests -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M7</version> <!-- Use the latest version available -->
+        <configuration>
+          <!-- Optional configuration to customize test executions -->
+          <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+        </configuration>
+      </plugin>
+
+      <!-- Maven Javadoc Plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.4.0</version> <!-- Check for the latest version -->
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      
       <!-- PMD plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
